@@ -35,7 +35,8 @@ router.post('/signUp', [
             const newUser = await User.create({
                 ...req.body,
                 password: hashedPassword,
-                rooms: []
+                rooms: [],
+                admin: false
             })
             const tokens = tokenService.generate({ _id: newUser._id })
             await tokenService.save(newUser._id, tokens.refreshToken)

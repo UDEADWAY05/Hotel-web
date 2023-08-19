@@ -2,22 +2,22 @@
     {
         "_id": "67rdca3eeb7f6fgeed471815",
         "about": "Информация о номере по запросу",
-        "available": false,
-        "img": "https://www.oloninterior.com/wp-content/uploads/2020/12/HOTELROOM-1.png",
+        "available": true,
+        "img": "http://localhost:8080/api/img",
         "Room": 1
     },
     {
         "_id": "67rdca3eeb7f6fgeed471816",
         "about": "Информация о номере по запросу",
-        "available": false,
-        "img": "https://www.oloninterior.com/wp-content/uploads/2020/12/HOTELROOM-1.png",
+        "available": true,
+        "img": "http://localhost:8080/api/img",
         "Room": 2
     },
     {
         "_id": "67rdca3eeb7f6fgeed471817",
         "about": "Информация о номере по запросу",
         "available": true,
-        "img": "https://www.oloninterior.com/wp-content/uploads/2020/12/HOTELROOM-1.png",
+        "img": "http://localhost:8080/api/img",
         "Room": 3
     },
     {
@@ -67,6 +67,6 @@
         "about": "Информация о номере по запросу",
         "available": true,
         "img": "https://www.oloninterior.com/wp-content/uploads/2020/12/HOTELROOM-1.png",
-        "Room": 9
+        "Room": 10
     }
 ]

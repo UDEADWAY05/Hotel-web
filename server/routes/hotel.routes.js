@@ -25,7 +25,8 @@ router.patch('/:roomId', auth, async (req, res) => {
 router.get('/', async (req, res) => {
     try {
         const list = await HotelRoom.find()
-        res.send(list)
+        const sorted = list.sort((user1, user2) => user1.Room > user2.Room ? 1 : -1);
+        res.send(sorted)
     } catch (error) {
         res.status(500).json({
             message: 'На сервере произошла ошибка. Попробуйте позже'

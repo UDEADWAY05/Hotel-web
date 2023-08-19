@@ -1,8 +1,7 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
 import { useParams } from "react-router-dom";
-import RoomsCard from "../common/hotelRoom";
-import RoomPage from "./roomPage";
-
+import RoomsCard from "../components/common/hotelRoom";
+import RoomPage from "../components/page/roomPage";
 
 const HotelRooms = () => {
     const params = useParams();
@@ -15,7 +14,7 @@ const HotelRooms = () => {
         : <div>
             <p className="mt-2 text text-title">Доступные номера</p>
             <RoomsCard />
-    </div>
-}
- 
+        </div>;
+};
+
 export default HotelRooms;

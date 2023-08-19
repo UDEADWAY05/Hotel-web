@@ -1,20 +1,28 @@
-import { Route, Switch, Redirect } from "react-router-dom"
-import NawBar from "./components/NawBar";
-import HotelRooms from "./components/page/hotelRooms";
-import Login from "./components/page/login";
-import AdminPanle from "./components/page/adminPanel";
-import AuthUserRooms from "./components/page/myRoom";
+import React from "react";
+import { Route, Switch, Redirect } from "react-router-dom";
+import NawBar from "./components/ui/NawBar";
+import HotelRooms from "./layouts/hotelRooms";
+import Login from "./layouts/login";
+import AdminPanle from "./layouts/adminPanel";
+import AuthUserRooms from "./layouts//myRoom";
+import AppLoader from "./components/ui/hoc/appLoader";
+import LogOut from "./layouts/logOut";
+import ProtectedRoute from "./components/common/protectedRoute";
+
 function App() {
     return (
         <div className="body">
-            <NawBar />
-            <Switch>
-                <Route path="/hotelRooms/:roomId?" component={HotelRooms} />
-                <Route path="/adminPanel" component={AdminPanle} />
-                <Route path="/login" component={Login} />
-                <Route path="/myroom" component={AuthUserRooms} />
-                <Redirect exast from="/" to="/hotelRooms" />
-            </Switch>
+            <AppLoader>
+                <NawBar />
+                <Switch>
+                    <Route path="/hotelRooms/:roomId?" component={HotelRooms} />
+                    <ProtectedRoute path="/adminPanel" component={AdminPanle} />
+                    <Route path="/login" component={Login} />
+                    <ProtectedRoute path="/myroom" component={AuthUserRooms} />
+                    <Route path="/logout" component={LogOut} />
+                    <Redirect exast from="/" to="/hotelRooms" />
+                </Switch>
+            </AppLoader>
         </div>
     );
 };
