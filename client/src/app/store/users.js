@@ -81,10 +81,8 @@ export const login = ({ payload, redirect }) => async(dispatch) => {
         history.push(redirect);
     } catch (error) {
         const { code, message } = error.response.data.error;
-        console.log({ code, message });
         if (code === 400) {
             const errorMessage = generateAuthError(message);
-            console.log(error);
             dispatch(authRequestFailed(errorMessage));
         } else {
             dispatch(authRequestFailed(error.message));
@@ -113,9 +111,7 @@ export const logOut = () => (dispatch) => {
 export const updateUser = (user) => async(dispatch) => {
     try {
         const { content } = await userService.updateUser(user);
-        console.log(content);
         dispatch(userUpdate(content));
-        // history.push(`/users/${user._id}`)
     } catch (error) {
         dispatch(userUpdateFailed(error));
     }

@@ -6,7 +6,6 @@ const auth = require("../middleware/auth.middleware")
 router.patch('/:roomId', auth, async (req, res) => {
     try {
         const { roomId } = req.params
-        console.log(req.user)
         if (req?.user) {
             const updatedRoom = await HotelRoom.findByIdAndUpdate(roomId, req.body, { new: true })
             res.send(updatedRoom)

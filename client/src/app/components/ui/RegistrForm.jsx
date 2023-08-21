@@ -32,7 +32,6 @@ const RegistrForm = () => {
         }
     };
     const handleChange = (target) => {
-        console.log(target);
         setData((prevState) => ({ ...prevState, [target.name]: target.value }));
     };
     const validate = () => {
@@ -48,7 +47,6 @@ const RegistrForm = () => {
         e.preventDefault();
         const isValid = validate();
         if (!isValid) return;
-        console.log(data);
         dispatch(signUp(data));
     };
     return (

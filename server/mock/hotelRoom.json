@@ -3,7 +3,7 @@
         "_id": "67rdca3eeb7f6fgeed471815",
         "about": "Информация о номере по запросу",
         "available": true,
-        "img": "http://localhost:8080/api/img",
+        "img": "http://45.12.231.213/api/img",
         "Room": 1
     },
     {

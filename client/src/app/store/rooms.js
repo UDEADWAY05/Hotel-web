@@ -44,7 +44,6 @@ function isOutdated(date) {
 
 export const loadRoomsList = () => async(dispatch, getState) => {
     const { lastFetch } = getState().rooms;
-    console.log(getState());
     if (isOutdated(lastFetch)) {
         dispatch(roomsRequested());
         try {
@@ -59,7 +58,6 @@ export const loadRoomsList = () => async(dispatch, getState) => {
 export const updateRoom = (room) => async(dispatch) => {
     try {
         const { content } = await roomsService.updateRooms(room);
-        console.log(content);
         dispatch(roomUpdate(content));
     } catch (error) {
         dispatch(roomUpdateFailed(error));

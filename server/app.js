@@ -5,7 +5,7 @@ const chalk = require('chalk')
 const initDatabase = require('./startUp/initDatabase')
 const routes = require('./routes')
 const cors = require('cors')
-
+const path = require('path')
 const app = express()
 
 app.use(express.json())
@@ -16,8 +16,14 @@ app.use('/api', routes)
 
 const port = config.get('port') ?? 8080
 
-//user: UDEADWAY
-//pass: hw-deadway-1234
+if (process.env.NODE_ENV === 'production') { 
+    app.use('/', express.static(path.join(__dirname, 'client')))
+
+    const indexPath = path.join(__dirname, 'client', 'index.html')
+    app.get('*', (req, res) => {
+        res.sendFile(indexPath)
+    })
+}
 
 async function start() {
     try {

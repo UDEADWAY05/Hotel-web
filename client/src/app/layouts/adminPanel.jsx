@@ -5,7 +5,6 @@ import { getUsersLoadingStatus } from "../store/users";
 
 const AdminPanle = () => {
     const isLoading = useSelector((getUsersLoadingStatus()));
-    console.log(isLoading);
     const rooms = useSelector(getRooms());
     const getStyleByAvailable = (status) => {
         const style = status ? "ars-place-available" : "ars-place-occupied";

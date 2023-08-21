@@ -11,7 +11,6 @@ const MyRoomCard = ({ roomId }) => {
     const authUser = useSelector(getCurrentUserData());
     const history = useHistory();
     const handleChange = (id) => {
-        console.log(id);
         history.push(`hotelRooms/${id}`);
     };
     const handleDelete = (id) => {
