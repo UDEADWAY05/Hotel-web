@@ -10,63 +10,63 @@
         "_id": "67rdca3eeb7f6fgeed471816",
         "about": "Информация о номере по запросу",
         "available": true,
-        "img": "http://localhost:8080/api/img",
+        "img": "http://45.12.231.213/api/img",
         "Room": 2
     },
     {
         "_id": "67rdca3eeb7f6fgeed471817",
         "about": "Информация о номере по запросу",
         "available": true,
-        "img": "http://localhost:8080/api/img",
+        "img": "http://45.12.231.213/api/img",
         "Room": 3
     },
     {
         "_id": "67rdca3eeb7f6fgeed471818",
         "about": "Информация о номере по запросу",
         "available": true,
-        "img": "https://www.oloninterior.com/wp-content/uploads/2020/12/HOTELROOM-1.png",
+        "img": "http://45.12.231.213/api/img",
         "Room": 4
     },
     {
         "_id": "67rdca3eeb7f6fgeed471819",
         "about": "Информация о номере по запросу",
         "available": true,
-        "img": "https://www.oloninterior.com/wp-content/uploads/2020/12/HOTELROOM-1.png",
+        "img": "http://45.12.231.213/api/img",
         "Room": 5
     },
     {
         "_id": "67rdca3eeb7f6fgeed471820",
         "about": "Информация о номере по запросу",
         "available": true,
-        "img": "https://www.oloninterior.com/wp-content/uploads/2020/12/HOTELROOM-1.png",
+        "img": "http://45.12.231.213/api/img",
         "Room": 6
     },
     {
         "_id": "67rdca3eeb7f6fgeed471821",
         "about": "Информация о номере по запросу",
         "available": true,
-        "img": "https://www.oloninterior.com/wp-content/uploads/2020/12/HOTELROOM-1.png",
+        "img": "http://45.12.231.213/api/img",
         "Room": 7
     },
     {
         "_id": "67rdca3eeb7f6fgeed471822",
         "about": "Информация о номере по запросу",
         "available": true,
-        "img": "https://www.oloninterior.com/wp-content/uploads/2020/12/HOTELROOM-1.png",
+        "img": "http://45.12.231.213/api/img",
         "Room": 8
     },
     {
         "_id": "67rdca3eeb7f6fgeed471823",
         "about": "Информация о номере по запросу",
         "available": true,
-        "img": "https://www.oloninterior.com/wp-content/uploads/2020/12/HOTELROOM-1.png",
+        "img": "http://45.12.231.213/api/img",
         "Room": 9
     },
     {
         "_id": "67rdca3eeb7f6fgeed471824",
         "about": "Информация о номере по запросу",
         "available": true,
-        "img": "https://www.oloninterior.com/wp-content/uploads/2020/12/HOTELROOM-1.png",
+        "img": "http://45.12.231.213/api/img",
         "Room": 10
     }
 ]
