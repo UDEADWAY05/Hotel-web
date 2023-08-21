@@ -2,9 +2,9 @@ import React, { useState, useEffect } from "react";
 import TextField from "../common/form/textField";
 import { validator } from "../../utils/validator";
 import "../../../css/index.css";
-import { useHistory } from "react-router-dom/cjs/react-router-dom.min";
-import { useDispatch } from "react-redux";
-import { login } from "../../store/users";
+import { Redirect, useHistory } from "react-router-dom/cjs/react-router-dom.min";
+import { useDispatch, useSelector } from "react-redux";
+import { getIsLoggedIn, login } from "../../store/users";
 
 const LoginForm = () => {
     const history = useHistory();

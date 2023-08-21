@@ -8,11 +8,9 @@ const ProtectedRouteAdmin = ({ component: Component, children, ...rest }) => {
     const isLoggedIn = useSelector(getIsLoggedIn());
     const userIsAdmin = useSelector(getCurrentUserAdmin());
     return <Route {...rest} render={(props) => {
-        if (!isLoggedIn) {
+        if (isLoggedIn) {
             if (userIsAdmin === true) {
-                return <Redirect to={{
-                    pathname: "/adminPanel"
-                }} />;
+                return Component ? <Component {...props} /> : children;
             }
             if (userIsAdmin === false) {
                 return <Redirect to={{
@@ -21,10 +19,12 @@ const ProtectedRouteAdmin = ({ component: Component, children, ...rest }) => {
             }
         } else {
             return <Redirect to={{
-                pathname: "/hotelRooms"
+                pathname: "/login",
+                state: {
+                    from: props.location
+                }
             }} />;
         }
-        return Component ? <Component {...props} /> : children;
     }} />;
 };
 
