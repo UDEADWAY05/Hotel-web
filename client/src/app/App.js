@@ -8,6 +8,7 @@ import AuthUserRooms from "./layouts//myRoom";
 import AppLoader from "./components/ui/hoc/appLoader";
 import LogOut from "./layouts/logOut";
 import ProtectedRoute from "./components/common/protectedRoute";
+import ProtectedRouteAdmin from "./components/common/protectedRouteAdmin";
 
 function App() {
     return (
@@ -16,7 +17,7 @@ function App() {
                 <NawBar />
                 <Switch>
                     <Route path="/hotelRooms/:roomId?" component={HotelRooms} />
-                    <ProtectedRoute path="/adminPanel" component={AdminPanle} />
+                    <ProtectedRouteAdmin path="/adminPanel" component={AdminPanle} />
                     <Route path="/login" component={Login} />
                     <ProtectedRoute path="/myroom" component={AuthUserRooms} />
                     <Route path="/logout" component={LogOut} />
