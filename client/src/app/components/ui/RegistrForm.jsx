@@ -2,8 +2,8 @@ import React, { useState, useEffect } from "react";
 import TextField from "../common/form/textField";
 import { validator } from "../../utils/validator";
 import "../../../css/index.css";
-import { useDispatch, useSelector } from "react-redux";
-import { getIsLoggedIn, signUp } from "../../store/users";
+import { useDispatch } from "react-redux";
+import { signUp } from "../../store/users";
 
 const RegistrForm = () => {
     const dispatch = useDispatch();
