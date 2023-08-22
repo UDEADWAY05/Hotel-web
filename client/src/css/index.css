@@ -131,19 +131,45 @@
 }
 
 .room-page-right {
+    display: flex;
+    flex-direction: column;
     width: 65%;
     margin: 20px;
+    justify-content: space-between;
 }
 
 .room-text-right {
+
+    padding: 30px 0 10px 30px;
+}
+
+.room-text-right-title {
     font-size: 25px;
-    margin: 30px 0 20px 30px;
+}
+
+.room-text-right-subtitle {
+    color: rgba(192, 0, 0, 0.651);
+}
+
+.room-button-div {
+    display: flex;
+    justify-content: end;
 }
 
 .room-button-right {
-    width: 200px;
-    height: 50px;
-    margin: 120px 0 0 400px ;
+    max-width: 200px;
+    padding: 5px 35px;
+    border: 4px solid;
+    border-radius: 7px;
+    border-color: #f7d597;
+    background-color: blanchedalmond;
+}
+
+.room-button-right:disabled {
+    background-color: #5c5c5e5e;
+    border-color: #5c5c5e00;
+    color: #fff;
+    text-decoration: #fff;
 }
 
 .form-standart {
