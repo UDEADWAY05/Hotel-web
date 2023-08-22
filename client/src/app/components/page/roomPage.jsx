@@ -13,7 +13,6 @@ const RoomPage = ({ id }) => {
     const isLoggedIn = useSelector(getIsLoggedIn());
     const authUser = useSelector(getCurrentUserData());
     const getClassesButton = () => {
-        console.log(!isLoggedIn === true, !room.available);
         if (isLoggedIn) {
             if (room.available) {
                 return false;

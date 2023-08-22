@@ -23,7 +23,9 @@ const roomsSlice = createSlice({
             state.isLoading = false;
         },
         roomUpdate: (state, action) => {
-            state.entities = [...state.entities.filter(u => u._id !== action.payload._id), action.payload];
+            const rooms = [...state.entities.filter(u => u._id !== action.payload._id), action.payload];
+            const sorted = rooms.sort((user1, user2) => user1.Room > user2.Room ? 1 : -1);
+            state.entities = sorted;
         },
         roomUpdateFailed: (state, action) => {
             state.error = action.payload;

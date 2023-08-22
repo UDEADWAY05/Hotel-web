@@ -68,5 +68,19 @@
         "available": true,
         "img": "http://45.12.231.213/api/img/10",
         "Room": 10
+    },
+    {
+        "_id": "67rdca3eeb7f6fgeed471820",
+        "about": "Информация о номере по запросу",
+        "available": true,
+        "img": "http://45.12.231.213/api/img/11",
+        "Room": 11
+    },
+    {
+        "_id": "67rdca3eeb7f6fgeed471821",
+        "about": "Информация о номере по запросу",
+        "available": true,
+        "img": "http://45.12.231.213/api/img/12",
+        "Room": 12
     }
 ]
