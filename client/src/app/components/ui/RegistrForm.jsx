@@ -10,9 +10,9 @@ const RegistrForm = () => {
     const [data, setData] = useState({ email: "", password: "", stayOn: false });
     const [errors, setErrors] = useState({});
     const validatorConfig = {
-        login: {
+        email: {
             isRequired: {
-                message: "login обязателен для заполнения"
+                message: "Email обязателен для заполнения"
             }
         },
         password: {
@@ -52,7 +52,7 @@ const RegistrForm = () => {
     return (
         <form className="form" onSubmit={handleSubmit}>
             <TextField
-                label="Логин"
+                label="Email"
                 name="email"
                 value={data.login}
                 onChange={handleChange}

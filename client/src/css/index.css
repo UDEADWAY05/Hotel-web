@@ -165,6 +165,11 @@
     background-color: blanchedalmond;
 }
 
+.room-button-right:hover {
+    border-color: #f7d597;
+    background-color: #f7d597;
+}
+
 .room-button-right:disabled {
     background-color: #5c5c5e5e;
     border-color: #5c5c5e00;
@@ -337,4 +342,20 @@ input::placeholder {
 .myRom-card-up {
     display: flex;
     justify-content: space-between;
+}
+
+.small-img-block {
+    display: flex;
+    justify-content: center;
+}
+
+.small-img {
+    border: 3px solid #f7d597;
+    border-radius: 7px;
+    width: 140px;
+    margin: 8px;
+}
+
+.small-img:hover {
+    scale: 1.1;
 }

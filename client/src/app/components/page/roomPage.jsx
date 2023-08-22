@@ -12,6 +12,16 @@ const RoomPage = ({ id }) => {
     const room = useSelector(getRoomById(id));
     const isLoggedIn = useSelector(getIsLoggedIn());
     const authUser = useSelector(getCurrentUserData());
+    const getClassesButton = () => {
+        console.log(!isLoggedIn === true, !room.available)
+        if (isLoggedIn) {
+            if (room.available) {
+                return false
+            }
+            return true
+        } 
+        return true
+    }
     const handleChange = (id) => {
         if (isLoggedIn === true) {
             const newRoom = { ...room, available: false };
@@ -30,7 +40,7 @@ const RoomPage = ({ id }) => {
                     {isLoggedIn === false && <p className="text room-text-right-subtitle">Что бы забронировать номер нужно войти в аккаунт!</p>}
                 </div>
                 <div className="room-button-div">
-                    <button className=" room-button-right" disabled={!isLoggedIn === true} onClick={() => handleChange(id)}><p className="text">Забронировать</p></button>
+                    <button className=" room-button-right" disabled={getClassesButton()} onClick={() => handleChange(id)}><p className="text">Забронировать</p></button>
                 </div>
             </div>
         </div>;

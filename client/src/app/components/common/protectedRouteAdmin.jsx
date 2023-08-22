@@ -9,10 +9,10 @@ const ProtectedRouteAdmin = ({ component: Component, children, ...rest }) => {
     const userIsAdmin = useSelector(getCurrentUserAdmin());
     return <Route {...rest} render={(props) => {
         if (isLoggedIn) {
-            if (userIsAdmin === true) {
+            if (userIsAdmin) {
                 return Component ? <Component {...props} /> : children;
             }
-            if (userIsAdmin === false) {
+            if (!userIsAdmin) {
                 return <Redirect to={{
                     pathname: "/hotelRooms"
                 }} />;

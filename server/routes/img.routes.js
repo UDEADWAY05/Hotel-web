@@ -1,12 +1,11 @@
 const express = require('express')
 const router = express.Router({ mergeParams: true })
 const fs = require('fs/promises')
-// const static = require('node-static');
 const path = require('path')
 
-router.get('/', async (req, res) => {
+router.get('/:id', async (req, res) => {
     try {
-        const wayImg = path.join(__dirname, '..' ,'./static', './room.jpg')
+        const wayImg = path.join(__dirname, '..' ,'./static', `./room${req.params.id}.jpg`)
         res.setHeader("Content-Type", "image/jpeg");
         const img = await fs.readFile(wayImg)
         res.status(200).end(img);

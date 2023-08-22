@@ -9,7 +9,10 @@ const RoomCard = ({ room }) => {
     };
     return <div className="room-card">
         <p className="text room-card-number" key={room._id}>{room.Room} </p>
-        <p className="text room-card-title">Фото</p>
+        {/* <p className="text room-card-title">Фото</p> */}
+        <div className="small-img-block">
+            <img className="small-img" src={room.img} alt="" />
+        </div>
         <button className="room-button" onClick={() => handleChange(room._id)}><p className="text">Открыть</p></button>
     </div>;
 };

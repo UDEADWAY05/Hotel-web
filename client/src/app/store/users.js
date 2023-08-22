@@ -147,7 +147,7 @@ export const getCurrentUserRooms = () => (state) => {
 export const getCurrentUserAdmin = () => (state) => {
     return state.users.entities
         ? state.users.entities.find((user) => user._id === state.users.auth.userId).admin
-        : false;
+        : null;
 };
 export const getAuthErrors = () => (state) => state.users.error;
 
