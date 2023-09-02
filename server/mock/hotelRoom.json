@@ -4,83 +4,95 @@
         "about": "Информация о номере по запросу",
         "available": true,
         "img": "http://45.12.231.213/api/img/1",
-        "Room": 1
+        "Room": 1,
+        "userId": null
     },
     {
         "_id": "67rdca3eeb7f6fgeed471816",
         "about": "Информация о номере по запросу",
         "available": true,
         "img": "http://45.12.231.213/api/img/2",
-        "Room": 2
+        "Room": 2,
+        "userId": null
     },
     {
         "_id": "67rdca3eeb7f6fgeed471817",
         "about": "Информация о номере по запросу",
         "available": true,
         "img": "http://45.12.231.213/api/img/3",
-        "Room": 3
+        "Room": 3,
+        "userId": null
     },
     {
         "_id": "67rdca3eeb7f6fgeed471818",
         "about": "Информация о номере по запросу",
         "available": true,
         "img": "http://45.12.231.213/api/img/4",
-        "Room": 4
+        "Room": 4,
+        "userId": null
     },
     {
         "_id": "67rdca3eeb7f6fgeed471819",
         "about": "Информация о номере по запросу",
         "available": true,
         "img": "http://45.12.231.213/api/img/5",
-        "Room": 5
+        "Room": 5,
+        "userId": null
     },
     {
         "_id": "67rdca3eeb7f6fgeed471820",
         "about": "Информация о номере по запросу",
         "available": true,
         "img": "http://45.12.231.213/api/img/6",
-        "Room": 6
+        "Room": 6,
+        "userId": null
     },
     {
         "_id": "67rdca3eeb7f6fgeed471821",
         "about": "Информация о номере по запросу",
         "available": true,
         "img": "http://45.12.231.213/api/img/7",
-        "Room": 7
+        "Room": 7,
+        "userId": null
     },
     {
         "_id": "67rdca3eeb7f6fgeed471822",
         "about": "Информация о номере по запросу",
         "available": true,
         "img": "http://45.12.231.213/api/img/8",
-        "Room": 8
+        "Room": 8,
+        "userId": null
     },
     {
         "_id": "67rdca3eeb7f6fgeed471823",
         "about": "Информация о номере по запросу",
         "available": true,
         "img": "http://45.12.231.213/api/img/9",
-        "Room": 9
+        "Room": 9,
+        "userId": null
     },
     {
         "_id": "67rdca3eeb7f6fgeed471824",
         "about": "Информация о номере по запросу",
         "available": true,
         "img": "http://45.12.231.213/api/img/10",
-        "Room": 10
+        "Room": 10,
+        "userId": null
     },
     {
         "_id": "67rdca3eeb7f6fgeed471820",
         "about": "Информация о номере по запросу",
         "available": true,
         "img": "http://45.12.231.213/api/img/11",
-        "Room": 11
+        "Room": 11,
+        "userId": null
     },
     {
         "_id": "67rdca3eeb7f6fgeed471821",
         "about": "Информация о номере по запросу",
         "available": true,
         "img": "http://45.12.231.213/api/img/12",
-        "Room": 12
+        "Room": 12,
+        "userId": null
     }
 ]

@@ -9,7 +9,9 @@ const NavProfile = () => {
     const toggleMenu = () => {
         setOper(presState => !presState);
     };
-    if (!currentUser) return "loading...";
+    if (!currentUser) {
+        return <p className="text text-main me-2">loading...</p>;
+    }
     return (<div className="dropdown" onClick={toggleMenu}>
         <div className="btn dropdown-toggle d-flex align-items-center">
             <p className="text text-main me-2">{currentUser.email}</p>

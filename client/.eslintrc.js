@@ -12,9 +12,8 @@ module.exports = {
     rules: {
         indent: ["error", 4],
         semi: [2, "always"],
-
         "space-before-function-paren": ["error", "never"],
-
-        quotes: ["error", "double", { allowTemplateLiterals: true }]
+        quotes: ["error", "double", { allowTemplateLiterals: true }],
+        "react/no-unescaped-entities": "off",
     }
 };

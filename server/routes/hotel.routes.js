@@ -33,6 +33,44 @@ router.get('/', async (req, res) => {
     }
 })
 
+router.post('/', auth , async (req, res) => {
+    try {
+        if (req?.user) {
+            const newHotel = await HotelRoom.create({
+                ...req.body,
+                available: true,
+                userId: null
+            })
+            res.send(newHotel)
+        } else {
+            res.status(401).json({
+                message: "Unauthorized"
+            })
+        }
+    } catch (error) {
+        res.status(500).json({
+            message: 'На сервере произошла ошибка. Попробуйте позже'
+        }) 
+    }
+})
+
+router.delete('/:roomId', auth, async (req, res) => {
+    try {
+        const { roomId } = req.params
+        if (req?.user) {
+            const deletedRoom = await HotelRoom.findByIdAndDelete(roomId)
+            res.send(deletedRoom)
+        } else {
+            res.status(401).json({
+                message: "Unauthorized"
+            })
+        }
+    } catch (error) {
+        res.status(500).json({
+            message: 'На сервере произошла ошибка. Попробуйте позже'
+        }) 
+    }
+})
 
 
 module.exports = router

@@ -19,7 +19,9 @@ const AuthUserRooms = () => {
         </div>;
     } return <div>
         <p className="mt-2 text text-title">Мои номера</p>
-        <p className="mt-2 text text-title">Loading...</p>
+        <div className="div-loading-circle">
+            <div className="circle"></div>
+        </div>
     </div>;
 };
 

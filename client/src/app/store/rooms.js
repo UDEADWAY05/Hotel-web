@@ -29,13 +29,28 @@ const roomsSlice = createSlice({
         },
         roomUpdateFailed: (state, action) => {
             state.error = action.payload;
+        },
+        roomDelete: (state, action) => {
+            const rooms = [...state.entities.filter(u => u._id !== action.payload)];
+            state.entities = rooms;
+        },
+        roomDeleteFailed: (state, action) => {
+            state.error = action.payload;
+        },
+        roomCreated: (state, action) => {
+            const rooms = [...state.entities, action.payload];
+            const sorted = rooms.sort((user1, user2) => user1.Room > user2.Room ? 1 : -1);
+            state.entities = sorted;
+        },
+        roomCreatedFailed: (state, action) => {
+            state.error = action.payload;
         }
     }
 });
 
 const { reducer: roomsReducer, actions } = roomsSlice;
 
-const { roomsReceved, roomsRequested, roomsRequesFailed, roomUpdate, roomUpdateFailed } = actions;
+const { roomsReceved, roomsRequested, roomsRequesFailed, roomUpdate, roomDelete, roomUpdateFailed, roomDeleteFailed, roomCreated, roomCreatedFailed } = actions;
 
 function isOutdated(date) {
     if (Date.now() - date > 10 * 60 * 1000) {
@@ -63,6 +78,24 @@ export const updateRoom = (room) => async(dispatch) => {
         dispatch(roomUpdate(content));
     } catch (error) {
         dispatch(roomUpdateFailed(error));
+    }
+};
+
+export const createdRoom = (room) => async(dispatch) => {
+    try {
+        const { content } = await roomsService.createdRoom(room);
+        dispatch(roomCreated(content));
+    } catch (error) {
+        dispatch(roomCreatedFailed(error));
+    }
+};
+
+export const deleteRoom = (id) => async(dispatch) => {
+    try {
+        const { content } = await roomsService.deleteRoom(id);
+        dispatch(roomDelete(id));
+    } catch (error) {
+        dispatch(roomDeleteFailed(error));
     }
 };
 

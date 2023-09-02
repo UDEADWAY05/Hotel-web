@@ -1,0 +1,51 @@
+html[data-theme='light'] {
+    --buttom-text-color: #5c5c5e;
+    --button-background-color: blanchedalmond;
+    --button-border-color: #f7d597;
+
+    --button-not-active: #5c5c5e5e;
+    --text-red: rgba(192, 0, 0, 0.651);;
+
+    --input-text-color: #5c5c5e;
+    --input-placeholder-text-color: #5c5c5e;
+    --input-background-color: #F9F8F3;
+    --input-border-color: blanchedalmond;
+    --input-border-color-focus: #f7d597;
+
+    --room-card-color: #F9F8F3;
+
+    --nawbar-background-color: #F9F8F3;
+    --nawbar-border-color: blanchedalmond;
+
+    --border-color: blanchedalmond;
+    --text-color: #5c5c5e;
+    --background-color: #fff;
+    
+    --myroom-button-color: #fff;
+
+}
+html[data-theme='dark'] {
+    --buttom-text-color: #5c5c5e;
+    --button-background-color: #535353;
+    --button-border-color: #f7d597;
+
+    --button-not-active: #939393;
+    --text-red: rgb(255, 53, 53);
+
+    --input-text-color: #5c5c5e;
+    --input-placeholder-text-color: #5c5c5e;
+    --input-background-color: #535353;
+    --input-border-color: #f7d597;
+    --input-border-color-focus: #fdc55d;
+
+    --room-card-color: #535353;
+    
+    --nawbar-background-color: #535353;
+    --nawbar-border-color: #f7d597;
+
+    --text-color: blanchedalmond;
+    --background-color: #333333;
+    --border-color: blanchedalmond;
+
+    --myroom-button-color: #535353;
+}

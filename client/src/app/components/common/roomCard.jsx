@@ -13,7 +13,7 @@ const RoomCard = ({ room }) => {
         <div className="small-img-block">
             <img className="small-img" src={room.img} alt="" />
         </div>
-        <button className="room-button" onClick={() => handleChange(room._id)}><p className="text">Открыть</p></button>
+        <button className="room-button" onClick={() => handleChange(room._id)}>Открыть</button>
     </div>;
 };
 

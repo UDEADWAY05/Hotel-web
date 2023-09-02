@@ -14,7 +14,9 @@ const RoomsCard = () => {
             return null;
         })}</div>;
     };
-    return <p className="text rooms-card text text-title">loading...</p>;
+    return <div className="div-loading-circle">
+        <div className="circle"></div>
+    </div>;
 };
 
 export default RoomsCard;

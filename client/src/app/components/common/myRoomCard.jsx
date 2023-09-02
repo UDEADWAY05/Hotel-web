@@ -25,7 +25,7 @@ const MyRoomCard = ({ roomId }) => {
             <p className="text room-card-number" key={room._id}>{room.Room} </p>
             <button className="myRoom-button-delete" onClick={() => handleDelete(room._id)}><i className="bi bi-x-lg"></i></button>
         </div>
-        <button className="room-button myRoom-button-card" onClick={() => handleChange(room._id)}><p className="text">Открыть</p></button>
+        <button className="room-button myRoom-button-card" onClick={() => handleChange(room._id)}>Открыть</button>
     </div>;
 };
 
