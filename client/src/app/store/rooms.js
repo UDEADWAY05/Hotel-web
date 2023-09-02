@@ -93,7 +93,7 @@ export const createdRoom = (room) => async(dispatch) => {
 export const deleteRoom = (id) => async(dispatch) => {
     try {
         const { content } = await roomsService.deleteRoom(id);
-        dispatch(roomDelete(id));
+        dispatch(roomDelete(content._id));
     } catch (error) {
         dispatch(roomDeleteFailed(error));
     }
